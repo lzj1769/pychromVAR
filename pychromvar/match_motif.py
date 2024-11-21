@@ -1,5 +1,9 @@
 import os
-from typing import Union, Literal, get_args
+from typing import Union
+try:
+    from typing import Literal, get_args # for python 3.8 and above
+except ImportError:
+    from typing_extensions import Literal, get_args # for python lower than 3.8
 import numpy as np
 from tqdm import tqdm
 import MOODS.scan
